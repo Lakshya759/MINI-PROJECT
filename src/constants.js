@@ -1,1 +1,1 @@
-export const DB_NAME="mini project"
+export const DB_NAME="mini-project"
