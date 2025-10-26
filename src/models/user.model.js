@@ -24,10 +24,6 @@ const userSchema = new Schema({
       enum: ["student", "faculty", "alumni", "helper"],
       default: "student",
     },
-    collegeVerified:{ 
-        type: Boolean, 
-        default: false 
-    },
     branch:{ 
         type: String 
     },
@@ -43,9 +39,6 @@ const userSchema = new Schema({
     },
     refreshToken:{ 
         type: String 
-    },
-    verificationToken:{
-      type:String
     }
   },
   { timestamps: true }
