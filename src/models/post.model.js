@@ -4,7 +4,8 @@ const postSchema = new mongoose.Schema({
     title:{ 
         type: String, 
         required: true, 
-        trim: true },
+        trim: true 
+    },
     body:{ 
         type: String, 
         required: true 
@@ -17,9 +18,6 @@ const postSchema = new mongoose.Schema({
     tags:[
         { type: String, lowercase: true, trim: true }
     ],
-    attachments:[
-        { type: String }
-    ], // URLs of uploaded images/files
     upvotes:[
         { type: mongoose.Schema.Types.ObjectId, 
             ref: "User" 
@@ -29,15 +27,11 @@ const postSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, 
         ref: "Answer" 
     },
-    views:{ 
-        type: Number, 
-        default: 0 
-    },
   },
   { timestamps: true }
 );
 
 // Text index for search
-postSchema.index({ title: "text", body: "text", tags: 1 });
+postSchema.index({ title: "text", body: "text"});
 
 export const Post = mongoose.model("Post", postSchema);

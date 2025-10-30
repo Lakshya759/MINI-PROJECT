@@ -88,7 +88,7 @@ const registerUser=asyncHandler(async (req,res)=>{
     }
 
 
-    const user=User.create({
+    const user=await User.create({
         email,password,name,branch,year
     })
     
@@ -125,7 +125,6 @@ const loginUser = asyncHandler(async(req,res)=>{
     
     const options={
         httpOnly:true,
-        secure:true
     }
 
 
@@ -164,7 +163,6 @@ const logoutUser = asyncHandler(async(req,res)=>{
     )
     const options={
         httpOnly:true,
-        secure:true
     }
 
     return res
@@ -221,6 +219,8 @@ const refreshAccessToken=asyncHandler(async(req,res)=>{
         
     }
 })
+
+
 
 
 
