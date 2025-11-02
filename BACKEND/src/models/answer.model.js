@@ -21,10 +21,6 @@ const answerSchema = new mongoose.Schema(
             ref: "User" 
         }
     ],
-    isAccepted:{ 
-        type: Boolean, 
-        default: false 
-    },
   },
   { timestamps: true }
 );
