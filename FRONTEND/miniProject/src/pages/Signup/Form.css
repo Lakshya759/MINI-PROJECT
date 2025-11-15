@@ -1,0 +1,33 @@
+.body{
+    padding: 0;
+    margin: 0;
+}
+
+input{
+    caret-color: white; 
+    border: none;
+    border-bottom: 2px solid white;
+    margin-left: 5%;
+    width: 90%;
+    background-color: #99a1af ;
+    color: white;
+}
+input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;     /* remove Chrome blue border */
+    border-bottom: 2px solid #4b5563; /* keep same line */
+}
+
+/* Normal input style */
+
+/* Autofill fix */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    background-color:#99a1af  !important;
+    -webkit-box-shadow: 0 0 0px 1000px #99a1af   inset !important;
+    -webkit-text-fill-color: white !important; /* <-- THIS changes autofill text */
+    color: white !important;
+}
+
