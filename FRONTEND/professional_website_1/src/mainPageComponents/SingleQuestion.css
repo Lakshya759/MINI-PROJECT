@@ -1,0 +1,163 @@
+/* Page Background */
+.page {
+  background: #f6f6f6;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Back button */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #3b3b3b;
+  text-decoration: none;
+}
+
+/* Question Card */
+.question-card {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #e3e3e3;
+  margin-bottom: 25px;
+}
+
+.question-header h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #1b1b1b;
+}
+
+/* User */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  background: #dce5f7;
+  color: #2962ff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.avatar.green {
+  background: #cf87f6;
+  color: #901ad0;
+}
+
+.username {
+  font-size: 13px;
+  color: #555;
+}
+
+.views {
+  margin-left: auto;
+  font-size: 13px;
+  color: #666;
+}
+
+.question-text {
+  margin: 15px 0;
+  color: #444;
+  font-size: 15px;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background: #eef0f5;
+  color: #4d4f57;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Answers Title */
+.answers-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #1b1b1b;
+}
+
+/* Answer Card */
+.answer-card {
+  background: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.vote-section {
+  font-size: 20px;
+  padding-right: 20px;
+  color: #444;
+}
+
+.answer-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.answer-text {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Your Answer */
+.your-answer {
+  margin-top: 20px;
+}
+
+.your-answer h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.your-answer textarea {
+  width: 100%;
+  height: 140px;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  resize: none;
+  outline: none;
+}
+
+.your-answer textarea:focus {
+  border-color: #8cb4ff;
+  box-shadow: 0 0 0 3px rgba(140, 180, 255, 0.4);
+}
+
+/* Button */
+.post-btn {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #206cf9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.post-btn:hover {
+  background: #1f5ac7;
+}

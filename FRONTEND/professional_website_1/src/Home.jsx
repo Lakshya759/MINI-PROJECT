@@ -1,0 +1,90 @@
+import axios from "axios"
+import Navbar from "./mainPageComponents/Navbar"
+import QuestionCard from "./mainPageComponents/QuestionCard"
+import Tabs from "./mainPageComponents/Tabs"
+import "./Home.css"
+import { useState,useEffect } from "react"
+
+const Home = () => {
+    const [message,setMessage]=useState("")
+    const [posts,setPosts]=useState([])
+    useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const res = await axios.get("http://localhost:8000/api/v1/posts/view", {
+          withCredentials: true // if your backend uses cookies
+        });
+        console.log("lakshya")
+
+        if (!res.data) {
+          setMessage("No posts found");
+        } else {
+          setPosts(res.data.data);
+        }
+
+      } catch (error) {
+        console.log(error);
+        setMessage("Can't fetch the posts");
+      }
+    };
+
+    fetchPosts();
+  }, []);
+  return (
+    <div className="home-container">
+      <Navbar />
+      <Tabs />
+
+      <div className="content">
+        <h2 className="section-title">Recent Questions</h2>
+        <p className="section-subtitle">Browse questions from the community</p>
+
+        {posts.map((post)=>
+            <QuestionCard
+                key={post._id}
+                title={post.title}
+                body={post.body}
+                author={post.author.name}
+                tags={post.tags}
+                upvotes={post.upvotes}
+                time={post.createdAt}
+            />
+        )}
+
+
+        <QuestionCard
+          title="How do I solve this calculus problem involving limits?"
+          desc="I'm stuck on finding the limit as x approaches 0 of (sin(x)/x). Can someone explain the steps?"
+          tags={["Mathematics", "Calculus"]}
+          author="Sarah Chen"
+          time="almost 2 years ago"
+          comments={1}
+          views={45}
+        />
+
+        <QuestionCard
+          title="Best resources for learning React hooks?"
+          desc="I'm new to React and finding hooks confusing. What are the best tutorials or documentation to understand useState and useEffect?"
+          tags={["Computer Science", "React", "Web Development"]}
+          author="Alex Kumar"
+          time="almost 2 years ago"
+          comments={2}
+          views={78}
+        />
+
+        <QuestionCard
+          title="Organic Chemistry: Understanding SN1 vs SN2 reactions"
+          desc="Can someone explain the key differences between SN1 and SN2 reactions? I keep mixing them up."
+          tags={["Chemistry", "Organic Chemistry"]}
+          author="Jordan Smith"
+          time="almost 2 years ago"
+          comments={0}
+          views={23}
+        />
+
+      </div>
+    </div>
+  )
+}
+
+export default Home

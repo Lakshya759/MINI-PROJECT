@@ -1,0 +1,16 @@
+.home-container {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 20px 40px;
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.section-subtitle {
+  color: #666;
+}
