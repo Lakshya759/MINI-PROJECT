@@ -1,7 +1,7 @@
 .home-container {
   min-height: 100vh;
-  background: linear-gradient(120deg, #d9e4ff, #f5d0ff, #ffd6e8);
-  background-attachment: fixed;  
+   background: linear-gradient(120deg, #d9e4ff, #f5d0ff, #ffd6e8);
+  background-attachment: fixed; 
 }
 
 .content {

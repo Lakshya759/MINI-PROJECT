@@ -1,0 +1,124 @@
+.qp-container {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(120deg, #d9e4ff, #f5d0ff, #ffd6e8);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+}
+
+/* TAG BAR */
+.qp-tagbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.qp-tag {
+  background: #f0f0f0;
+  color: black;
+  padding: 6px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.qp-tag-active {
+  background: #a855f7 !important; /* Purple */
+  color: white !important;
+  font-weight: bold;
+}
+
+/* SEARCH BAR */
+.qp-search-wrapper {
+  margin-bottom: 20px;
+}
+
+.qp-search {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+/* COUNT */
+.qp-count {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+/* LIST */
+.qp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* CARD */
+.qp-card {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.qp-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.qp-desc {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* CARD TAGS */
+.qp-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.qp-tag-small {
+  background: #ece5ff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* FOOTER */
+.qp-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qp-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.qp-avatar {
+  width: 35px;
+  height: 35px;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.qp-stats {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+}

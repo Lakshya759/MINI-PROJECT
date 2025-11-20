@@ -31,7 +31,7 @@ const createPost =asyncHandler(async(req,res)=>{
 })
 
 const viewAllPost = asyncHandler(async(req,res)=>{
-    const { tag, branch, page = 1, limit = 10 } = req.query;
+    const { tag, branch, page = 1, limit = 100 } = req.query;
     const filter = {};
     if (tag) filter.tags = tag;
     if (branch) filter.branch = branch;
@@ -123,11 +123,42 @@ const deletePost= asyncHandler(async(req,res)=>{
 })
 
 
+const viewTags = asyncHandler(async(req,res)=>{
+    const { tag, branch, page = 1, limit = 10 } = req.query;
+    const filter = {};
+    if (tag) filter.tags = tag;
+    if (branch) filter.branch = branch;
+
+
+    const posts = await Post.find(filter)
+      .populate("author", "name branch")
+      .sort({ createdAt: -1 })
+      .skip((page - 1) * limit)
+      .limit(Number(limit));
+    console.log(posts)
+    if(!posts){
+        throw new ApiError(404,"No post found with given tags")
+    }
+    
+    return res
+    .status(200)
+    .json(
+        new ApiResponse(
+            200,
+            posts,
+            "All the posts fetched successfully"
+        )
+    )
+
+})
 
 
 
 
-export {createPost,viewAllPost,viewSinglePost,updatePost,deletePost}
+
+
+
+export {createPost,viewAllPost,viewSinglePost,updatePost,deletePost,viewTags}
 
 
 

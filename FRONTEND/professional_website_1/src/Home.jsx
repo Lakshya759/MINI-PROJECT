@@ -90,7 +90,7 @@ const Home = () => {
         )}
 
 
-        <QuestionCard
+        {/* <QuestionCard
           title="How do I solve this calculus problem involving limits?"
           desc="I'm stuck on finding the limit as x approaches 0 of (sin(x)/x). Can someone explain the steps?"
           tags={["Mathematics", "Calculus"]}
@@ -118,7 +118,7 @@ const Home = () => {
           time="almost 2 years ago"
           comments={0}
           views={23}
-        />
+        /> */}
 
       </div>
     </div>

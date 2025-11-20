@@ -7,6 +7,7 @@ import Home from './Home.jsx'
 import AskQuestion from './mainPageComponents/AskQuestion.jsx'
 import SingleQuestion from './mainPageComponents/SingleQuestion.jsx'
 import User from './mainPageComponents/User.jsx';
+import Sidebar from "./mainPageComponents/Sidebar.jsx"
 const App = () => {
   return (
     
@@ -18,6 +19,8 @@ const App = () => {
       <Route path="/question/:id" element={<SingleQuestion />} />
       <Route path="/askQuestion" element={<AskQuestion />} /> 
       <Route path="/user" element={<User />} /> 
+      <Route path="/tags" element={<Sidebar />} /> 
+
 
     </Routes>
     
