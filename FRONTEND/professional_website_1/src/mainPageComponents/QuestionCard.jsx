@@ -1,8 +1,15 @@
 import "./QuestionCard.css";
+import {useNavigate} from "react-router-dom"
 
-const QuestionCard = ({ title, body, tags, author, time}) => {
+const QuestionCard = ({id, title, body, tags, author, time}) => {
+  const navigate=useNavigate()
+
+  const handleClick=()=>{
+    navigate(`/question/${id}`)
+  }
   return (
-    <div className="question-card">
+    
+    <div className="question-card" onClick={handleClick}>
       <h3>{title}</h3>
       <p className="desc">{body}</p>
 

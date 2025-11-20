@@ -2,8 +2,9 @@ import React from "react";
 import "./AskQuestion.css"
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const AskQuestion = () => {
-
+  const navigate=useNavigate()
     const [message,setMessage]=useState("")
     const [error,setError]=useState("")
     const [loading,setLoading]=useState("")
@@ -53,7 +54,10 @@ const AskQuestion = () => {
                     body:"",
                     tags:[]
                 })
-                // window.location.href(/main)
+                setTimeout(() => {
+                  navigate("/home");
+                }, 1000); 
+               
             }
         }catch(err){
             if (err.response) {

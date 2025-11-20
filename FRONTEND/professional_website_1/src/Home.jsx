@@ -32,8 +32,9 @@ const Home = () => {
   }, []);
   return (
     <div className="home-container">
+      
       <Navbar />
-      <Tabs />
+
 
       <div className="content">
         <h2 className="section-title">Recent Questions</h2>
@@ -42,6 +43,7 @@ const Home = () => {
         {posts.map((post)=>
             <QuestionCard
                 key={post._id}
+                id={post._id}
                 title={post.title}
                 body={post.body}
                 author={post.author.name}

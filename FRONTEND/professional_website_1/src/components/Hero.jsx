@@ -7,9 +7,9 @@ const Hero = () => {
         <div className="logos">CampusQuery</div>
         <div className="sections">
           <ul>
-            <li>Home</li>
-            <li>Features</li>
-            <li>About Us</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="">About Us</a></li>
           </ul>
         </div>
         <div className="login">
@@ -17,7 +17,7 @@ const Hero = () => {
           <button><Link to="/signup">SIGNUP</Link></button>
         </div>
       </nav>
-      <div className="containers">
+      <div className="containers" id="home">
         <div className="text">
           <div className="text1">Your Academic Q&A Community</div>
           <h1>Ask Questions, Share Knowledge, Excel Together</h1>
@@ -39,7 +39,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <section class="features-section">
+      <section class="features-section" id="feature">
         <div class="features-header">
           <h2>Everything You Need for Academic Success</h2>
           <p>
@@ -52,7 +52,7 @@ const Hero = () => {
         <div class="features-grid">
           <div class="feature-card">
             <div class="icon blue">
-              <i class="fas fa-comment-alt"></i>
+               <img src="/message.png" alt="" />
             </div>
             <h3>Ask Questions Freely</h3>
             <p>
@@ -63,7 +63,7 @@ const Hero = () => {
 
           <div class="feature-card">
             <div class="icon purple">
-              <i class="fas fa-search"></i>
+               <img src="/search.png" alt="" />
             </div>
             <h3>Smart Search</h3>
             <p>
@@ -74,7 +74,7 @@ const Hero = () => {
 
           <div class="feature-card">
             <div class="icon orange">
-              <i class="fas fa-thumbs-up"></i>
+              <img src="/thumb up.png" alt="" />
             </div>
             <h3>Upvote Best Answers</h3>
             <p>
@@ -85,7 +85,7 @@ const Hero = () => {
 
           <div class="feature-card">
             <div class="icon green">
-              <i class="fas fa-bookmark"></i>
+              <img src="/book.png" alt="" />
             </div>
             <h3>Save & Organize</h3>
             <p>
@@ -96,7 +96,7 @@ const Hero = () => {
 
           <div class="feature-card">
             <div class="icon yellow">
-              <i class="fas fa-award"></i>
+              <img src="/medal.png" alt="" />
             </div>
             <h3>Earn Reputation</h3>
             <p>
@@ -107,7 +107,7 @@ const Hero = () => {
 
           <div class="feature-card">
             <div class="icon violet">
-              <i class="fas fa-chart-line"></i>
+               <img src="/growth.png" alt="" />
             </div>
             <h3>Trending Topics</h3>
             <p>

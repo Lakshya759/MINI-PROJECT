@@ -53,7 +53,7 @@ const Login = () => {
 
         <div className="login-card">
             <div className="login-icon">
-                <i className="fas fa-lock"></i>
+                 <img src="/lock.png" alt="" />
             </div>
 
             <h2>Welcome back</h2>
@@ -73,12 +73,9 @@ const Login = () => {
                     <i className="fas fa-eye" id="togglePassword"></i>
                 </div>
 
-                <div className="forgot">
-                    <a href="#">Forgot password?</a>
-                </div>
 
                 <button className="btn">
-                    {/* Sign in <i className="fas fa-arrow-right"></i> */}
+                    Sign in <i className="fas fa-arrow-right"></i>
                 </button>
                 <h1 className="text-center text-red-600">{error}</h1>
                 <h1 className="text-center text-green-500">{message}</h1>

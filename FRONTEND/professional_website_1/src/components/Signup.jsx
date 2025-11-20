@@ -1,6 +1,7 @@
 import "./Signup.css";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [loading, setLoading] = useState(false);
@@ -67,7 +68,7 @@ const Signup = () => {
 
       <div className="register-card">
         <div className="login-icon">
-          <i className="fas fa-graduation-cap"></i>
+           <img src="/scholar.png" alt="" />
         </div>
 
         <h2>Student Registration</h2>
@@ -154,7 +155,7 @@ const Signup = () => {
           </button>
 
           <p className="signup-text">
-            Already have an account? <a href="#">Sign in</a>
+            Already have an account? <Link to="/login">Sign In</Link>
           </p>
         </form>
         <h1 className="text-center">{message}</h1>

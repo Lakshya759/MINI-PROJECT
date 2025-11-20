@@ -1,6 +1,14 @@
+
+
+
 /* Page Background */
 .page {
-  background: #f6f6f6;
+  background: linear-gradient(
+  135deg,
+  #e0e7ff 0%,
+  #f3e9ff 50%,
+  #ffffff 100%
+);
   padding: 20px;
   font-family: Arial, sans-serif;
 }
@@ -106,6 +114,7 @@
   font-size: 20px;
   padding-right: 20px;
   color: #444;
+  cursor: pointer;  
 }
 
 .answer-user {
@@ -161,3 +170,4 @@
 .post-btn:hover {
   background: #1f5ac7;
 }
+

@@ -74,7 +74,7 @@ const toggleUpvote= asyncHandler(async (req,res)=>{
     .json(
         new ApiResponse(
             200,
-            {},
+            {upvotes:answer.upvotes.length},
             response
         )
     )
