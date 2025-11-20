@@ -22,7 +22,7 @@ const Navbar = () => {
 
         <i className="ri-notification-3-line notif-icon"></i>
 
-        <div className="user-icon">CU</div>
+        <div className="user-icon"><Link to="/user">U</Link></div>
       </div>
     </nav>
   )

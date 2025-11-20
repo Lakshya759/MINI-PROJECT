@@ -21,8 +21,12 @@ const SingleQuestion = () => {
       if (!res.data) {
         console.log("Answers Not Found");
       } else {
-        setComments(res.data.data.answers);
-      }
+        if (res.data?.data?.answers) {
+          const sorted = res.data.data.answers.sort(
+            (a, b) => b.upvotes.length - a.upvotes.length
+          );
+          setComments(sorted); 
+      }}
     } catch (error) {
       console.log(error);
     }

@@ -21,10 +21,9 @@ const AskQuestion = () => {
             
         }
 
-    const tagOptions = [
-    "react", "express", "mongodb", "api", "frontend",
-    "backend", "authentication", "javascript", "tailwind"
-  ];
+   const tagOptions = ["c","cpp","java","python","javascript","typescript","html","css","react","nodejs","express","mongodb","mysql","android","flutter","dsa","dbms","os","computer-networks","machine-learning","ai","cybersecurity","cloud-computing","git","github","academics","exams","notes","projects","campus-life","hostel","mess","sports","library","events","clubs","announcements","lost-and-found","help","feedback","issues","placements","internships","opportunities"];
+
+
 
   const toggleTag = (tag) => {
     setFormData((prev) => {

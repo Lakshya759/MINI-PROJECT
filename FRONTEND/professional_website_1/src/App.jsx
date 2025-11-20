@@ -6,6 +6,7 @@ import Signup from "./components/Signup.jsx"
 import Home from './Home.jsx'
 import AskQuestion from './mainPageComponents/AskQuestion.jsx'
 import SingleQuestion from './mainPageComponents/SingleQuestion.jsx'
+import User from './mainPageComponents/User.jsx';
 const App = () => {
   return (
     
@@ -16,6 +17,8 @@ const App = () => {
       <Route path="/home" element={<Home/>} />
       <Route path="/question/:id" element={<SingleQuestion />} />
       <Route path="/askQuestion" element={<AskQuestion />} /> 
+      <Route path="/user" element={<User />} /> 
+
     </Routes>
     
 )}

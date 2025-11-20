@@ -47,7 +47,7 @@ const signUpUser =asyncHandler(async (req,res)=>{
         throw new ApiError(400, "Email Id is already registered")
     }
     //Generating verification token and saving it to database
-    const token = jwt.sign({ email,name, password,branch,year}, process.env.VERIFICATION_TOKEN_SECRET, { expiresIn: '15m' });
+    const token = jwt.sign({ email,name, password,branch,year,skills}, process.env.VERIFICATION_TOKEN_SECRET, { expiresIn: '15m' });
     
 
     const transporter = nodemailer.createTransport({
@@ -79,7 +79,7 @@ const registerUser=asyncHandler(async (req,res)=>{
     const { token } = req.query;
     const decoded = jwt.verify(token, process.env.VERIFICATION_TOKEN_SECRET);
 
-    const { email,name, password,branch , year } = decoded;
+    const { email,name, password,branch , year,skills } = decoded;
 
     const existingUser= await User.findOne({email})
 
@@ -89,7 +89,7 @@ const registerUser=asyncHandler(async (req,res)=>{
 
 
     const user=await User.create({
-        email,password,name,branch,year
+        email,password,name,branch,year,skills
     })
     
     return res
@@ -227,8 +227,28 @@ const refreshAccessToken=asyncHandler(async(req,res)=>{
     }
 })
 
+const getUser=asyncHandler(async(req,res)=>{
+    const users=req.user;
+    console.log(users)
+
+    if(users){
+        return res
+        .status(200)
+        .json(
+                new ApiResponse(
+                    200,
+                    users,
+                    "User Fetched Successfully"
+                )
+            )
+    }
+    else{
+        throw new ApiError(400,"User Not Found")
+    }
+})
 
 
 
 
-export {signUpUser,registerUser,loginUser,logoutUser,refreshAccessToken}
+
+export {signUpUser,registerUser,loginUser,logoutUser,refreshAccessToken,getUser}

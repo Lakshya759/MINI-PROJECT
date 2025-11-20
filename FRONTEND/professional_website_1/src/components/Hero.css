@@ -60,9 +60,8 @@ nav {
 
 
 /* Hero section */
-.containers{
+.containerss{
     display: flex;
-    
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -72,8 +71,8 @@ nav {
   #f3e9ff 50%,
   #ffffff 100%
 );
-min-height: 80vh;   
-    overflow: hidden;
+height: 85vh;   
+    
 }
 
 .text{
@@ -130,7 +129,13 @@ p{
 .button2{
     border: 1px solid #E5E7EB;
     color: #374151;
+    width: 100px;
+    border-radius: 10px;
 
+}
+
+.button2 a{
+    color:black
 }
 
 /* features */
@@ -161,7 +166,7 @@ p{
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
+    gap: 50px;
 }
 
 
@@ -225,4 +230,137 @@ p{
     height: 35px;
     width: auto;
 }
+
+.about-section {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+}
+
+.section-subtitle {
+    max-width: 700px;
+    margin: 10px auto 40px;
+    font-size: 15px;
+    color: #666;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.about-card {
+    background: #fff;
+    padding: 25px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+}
+
+.about-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Team Cards */
+.team-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background: #fff;
+    padding: 25px;
+    width: 300px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+}
+
+.team-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.team-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.team-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6A5AE0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+/* Repo Card */
+.repo-card {
+    margin: 50px auto 0;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.repo-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #7A5AF8, #F173CC);
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.repo-btn:hover {
+    opacity: 0.9;
+}
+
 

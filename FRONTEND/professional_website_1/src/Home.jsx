@@ -8,6 +8,32 @@ import { useState,useEffect } from "react"
 const Home = () => {
     const [message,setMessage]=useState("")
     const [posts,setPosts]=useState([])
+    function timeAgo(dateString) {
+      const now = new Date();
+      const past = new Date(dateString);
+
+      const seconds = Math.floor((now - past) / 1000);
+
+      const intervals = {
+        year: 31536000,
+        month: 2592000,
+        week: 604800,
+        day: 86400,
+        hour: 3600,
+        minute: 60,
+        second: 1,
+      };
+
+      for (let unit in intervals) {
+        const value = Math.floor(seconds / intervals[unit]);
+        if (value >= 1) {
+          return new Intl.RelativeTimeFormat("en", { numeric: "auto" })
+            .format(-value, unit);
+        }
+      }
+    }
+
+    
     useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -30,6 +56,16 @@ const Home = () => {
 
     fetchPosts();
   }, []);
+
+  const toCamelCase = (str) =>
+  str
+    ?.toLowerCase()
+    .split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
+  
+
   return (
     <div className="home-container">
       
@@ -38,18 +74,18 @@ const Home = () => {
 
       <div className="content">
         <h2 className="section-title">Recent Questions</h2>
-        <p className="section-subtitle">Browse questions from the community</p>
+        
 
         {posts.map((post)=>
             <QuestionCard
-                key={post._id}
-                id={post._id}
-                title={post.title}
-                body={post.body}
-                author={post.author.name}
-                tags={post.tags}
-                upvotes={post.upvotes}
-                time={post.createdAt}
+                key={post?._id}
+                id={post?._id}
+                title={post?.title}
+                body={post?.body}
+                author={toCamelCase(post?.author.name)}
+                tags={post?.tags}
+                upvotes={post?.upvotes}
+                time={timeAgo(post?.createdAt)}
             />
         )}
 

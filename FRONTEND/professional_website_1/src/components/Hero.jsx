@@ -9,7 +9,7 @@ const Hero = () => {
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#feature">Features</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a href="#about">About Us</a></li>
           </ul>
         </div>
         <div className="login">
@@ -17,7 +17,7 @@ const Hero = () => {
           <button><Link to="/signup">SIGNUP</Link></button>
         </div>
       </nav>
-      <div className="containers" id="home">
+      <div className="containerss" id="home">
         <div className="text">
           <div className="text1">Your Academic Q&A Community</div>
           <h1>Ask Questions, Share Knowledge, Excel Together</h1>
@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
           <div className="buttons">
             <button className="button1">Get Started</button>
-            <button className="button2">Learn More</button>
+            <button className="button2"><a href="#about">Learn More</a></button>
           </div>
         </div>
         <div className="image">
@@ -117,6 +117,75 @@ const Hero = () => {
           </div>
         </div>
       </section>
+      <section class="about-section" id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="section-subtitle">
+        CampusQuery is built to bring your entire campus community together — 
+        ask questions, share knowledge, stay updated, and collaborate with ease.
+    </p>
+
+    
+    <div class="about-cards">
+        <div class="about-card">
+            <h3>Our Vision</h3>
+            <p>
+                To create a smart digital ecosystem where students help each other,
+                clubs reach the right audience, and important information is never missed.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h3>Our Mission</h3>
+            <p>
+                To empower students to connect, learn, collaborate, and grow —
+                all through a single community-driven platform.
+            </p>
+        </div>
+    </div>
+
+    
+    <h2 class="team-title">Meet the Developers</h2>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+            <div class="team-icon">👨‍💻</div>
+            <h3>Lakshya Srivastava</h3>
+            <p><strong>Email:</strong> 2400520100047@ietlucknow.ac.in</p>
+            <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-icon">👨‍💻</div>
+            <h3>Ayush Sharma</h3>
+            <p><strong>Email:</strong> 2400520100026@ietlucknow.ac.in</p>
+            <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-icon">👨‍💻</div>
+            <h3>Himanshu</h3>
+            <p><strong>Email:</strong> 2400520100040@ietlucknow.ac.in</p>
+            <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-icon">👨‍💻</div>
+            <h3>Ishant Kumar</h3>
+            <p><strong>Email:</strong>2400520100041@ietlucknow.ac.in</p>
+            <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+        </div>
+
+    </div>
+
+    
+    <div class="repo-card">
+        <h3>Project Repository</h3>
+        <p>Explore the complete source code of CampusQuery on GitHub.</p>
+        <a href="https://github.com/Lakshya759/MINI-PROJECT" class="repo-btn">View GitHub Repo →</a>
+    </div>
+</section>
+
     </>
   );
 };

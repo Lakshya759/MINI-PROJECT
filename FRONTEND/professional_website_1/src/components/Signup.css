@@ -6,7 +6,7 @@
 }
 .containers{
 background: #f7f8ff;
-    height: 110vh;
+    height: 130vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,3 +153,32 @@ select {
         padding: 30px 20px;
     }
 }
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 20px;
+}
+
+.skill-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 14px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(4px);
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+}
+
+.skill-tag.selected {
+  background: #6c5ce7;
+  color: white;
+  border-color: #6c5ce7;
+}
+
