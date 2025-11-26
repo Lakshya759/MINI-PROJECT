@@ -93,9 +93,12 @@ const registerUser=asyncHandler(async (req,res)=>{
     })
     
     return res
-    .status(200)
-    .json(
-        new ApiResponse(200,{},"The User Has Been Verified And Registred Successfully")
+    // .status(200)
+    // .json(
+    //     new ApiResponse(200,{},"The User Has Been Verified And Registred Successfully")
+    // )
+    .send(
+        "<h1 style='font-size: 28px; color: #4F46E5; font-weight: 600; margin-top: 20px;'>VERIFICATION SUCCECSSFUL</h1>"
     )
 
 

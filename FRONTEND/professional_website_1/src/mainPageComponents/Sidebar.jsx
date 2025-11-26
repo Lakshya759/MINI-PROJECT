@@ -99,7 +99,7 @@ export default function QuestionPage() {
                 id={q?._id}
                 title={q?.title}
                 body={q?.body}
-                author={toCamelCase(q?.author.name)}
+                author={toCamelCase(q?.author?.name) || "Anonymous"}
                 tags={q?.tags}
                 upvotes={q?.upvotes}
                 time={timeAgo(q?.createdAt)}

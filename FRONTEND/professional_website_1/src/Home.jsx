@@ -82,7 +82,7 @@ const Home = () => {
                 id={post?._id}
                 title={post?.title}
                 body={post?.body}
-                author={toCamelCase(post?.author.name)}
+                author={toCamelCase(post?.author?.name) || "Anonymous"}
                 tags={post?.tags}
                 upvotes={post?.upvotes}
                 time={timeAgo(post?.createdAt)}

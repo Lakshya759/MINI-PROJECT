@@ -127,12 +127,12 @@ const SingleQuestion = () => {
 
       <div className="question-card">
         <div className="question-header">
-          <h2>{question.title}</h2>
+          <h2>{question?.title}</h2>
 
           <div className="user-info">
-            <div className="avatar">{question.author?.name?.[0]}</div>
+            <div className="avatar">{question?.author?.name?.[0] || "U"}</div>
             <div>
-              <p className="username">{question.author?.name}</p>
+              <p className="username">{question?.author?.name || "Anonymous"}</p>
             </div>
           </div>
 
@@ -149,14 +149,14 @@ const SingleQuestion = () => {
       </div>
       <h3 className="answers-title">{comments?.length} Answers</h3>
       {comments?.map((ans) => (
-        <div className="answer" key={ans._id}>
+        <div className="answer" key={ans?._id}>
           <div className="answer-card">
-            <div className="vote-section" onClick={() => upvote(ans._id)}>↑ {ans.upvotes.length || 0}</div>
+            <div className="vote-section" onClick={() => upvote(ans?._id)}>↑ {ans.upvotes.length || 0}</div>
 
             <div className="answer-body">
               <div className="answer-user">
-                <div className="avatar green">{ans.author.name[0]}</div>
-                <p className="username">{ans.author.name}</p>
+                <div className="avatar green">{ans?.author?.name[0] || "U"}</div>
+                <p className="username">{ans?.author?.name || "Anonymous"}</p>
               </div>
 
               <p className="answer-text">{ans.body}</p>
